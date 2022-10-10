@@ -1,0 +1,168 @@
+{
+  "Routes": [
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Login/login-user",
+      "DownstreamScheme": "https",
+      "ServiceName": "customerService",
+      "UpstreamPathTemplate": "/api/gateway/customer/login",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Login/register-user",
+      "DownstreamScheme": "https",
+      "ServiceName": "customerService",
+      "UpstreamPathTemplate": "/api/gateway/customer/register-user",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    // -------------------- Create Book---------------------
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/createbook",
+      "DownstreamScheme": "https",
+      "ServiceName": "customerService",
+      "UpstreamPathTemplate": "/api/gateway/customer/get-customers",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/createbook/Insert",
+      "DownstreamScheme": "https",
+      "ServiceName": "customerService",
+      "UpstreamPathTemplate": "/api/gateway/customer/get-customers",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/createbook",
+      "DownstreamScheme": "https",
+      "ServiceName": "customerService",
+      "UpstreamPathTemplate": "/api/gateway/customer/get-customers",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/createbook",
+      "DownstreamScheme": "https",
+      "ServiceName": "customerService",
+      "UpstreamPathTemplate": "/api/gateway/customer/get-customers",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/createbook/Details",
+      "DownstreamScheme": "https",
+      "ServiceName": "customerService",
+      "UpstreamPathTemplate": "/api/gateway/customer/Details",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/createbook/InsertUserDetails",
+      "DownstreamScheme": "https",
+      "ServiceName": "customerService",
+      "UpstreamPathTemplate": "/api/gateway/customer/Details",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/createbook/Black",
+      "DownstreamScheme": "https",
+      "ServiceName": "customerService",
+      "UpstreamPathTemplate": "/api/gateway/customer/Black",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/createbook/Unblack",
+      "DownstreamScheme": "https",
+      "ServiceName": "customerService",
+      "UpstreamPathTemplate": "/api/gateway/customer/Unblack",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/createbook/Search",
+      "DownstreamScheme": "https",
+      "ServiceName": "customerService",
+      "UpstreamPathTemplate": "/api/gateway/customer/Search",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+    //------Create Book End--------
+
+    //-------Search Book Start---------------------
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Books",
+      "DownstreamScheme": "https",
+      "ServiceName": "supplierService",
+      "UpstreamPathTemplate": "/api/gateway/Books",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Books/Search",
+      "DownstreamScheme": "https",
+      "ServiceName": "supplierService",
+      "UpstreamPathTemplate": "/api/gateway/Books/Search",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Books/Details",
+      "DownstreamScheme": "https",
+      "ServiceName": "supplierService",
+      "UpstreamPathTemplate": "/api/gateway/Books/Details",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+
+    //------Search Book End------
+
+    //{
+    //  "UseServiceDiscovery": true,
+    //  "DownstreamPathTemplate": "/api/Books",
+    //  "DownstreamScheme": "https",
+    //  "ServiceName": "customerService",
+    //  "UpstreamPathTemplate": "/api/gateway/customer/get-orders",
+    //  "UpstreamHttpMethod": [ "Get" ]
+    //},
+    //{
+    //  "UseServiceDiscovery": true,
+    //  "DownstreamPathTemplate": "/api/Books",
+    //  "DownstreamScheme": "https",
+    //  "ServiceName": "customerService",
+    //  "UpstreamPathTemplate": "/api/gateway/customer/create-order",
+    //  "UpstreamHttpMethod": [ "Post" ]
+    //},
+    //{
+    //  "UseServiceDiscovery": true,
+    //  "DownstreamPathTemplate": "/api/supplier",
+    //  "DownstreamScheme": "https",
+    //  "ServiceName": "supplierService",
+    //  "UpstreamPathTemplate": "/api/gateway/supplier/get-suppliers",
+    //  "UpstreamHttpMethod": [ "Get" ]
+    //},
+    //{
+    //  "UseServiceDiscovery": true,
+    //  "DownstreamPathTemplate": "/api/product/get-products",
+    //  "DownstreamScheme": "https",
+    //  "ServiceName": "supplierService",
+    //  "UpstreamPathTemplate": "/api/gateway/supplier/get-products",
+    //  "UpstreamHttpMethod": [ "Get" ]
+    //}
+  ],
+  "GlobalConfiguration": {
+    // "BaseUrl": "http://localhost:44363"
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": "8500",
+      "Type": "Consul"
+    }
+  }
+}

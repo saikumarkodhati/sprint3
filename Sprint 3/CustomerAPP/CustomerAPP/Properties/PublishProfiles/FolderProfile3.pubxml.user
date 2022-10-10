@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\customerapp</_PublishTargetUrl>
+    <History>True|2022-10-10T05:38:57.6197546Z;True|2022-10-10T10:07:01.8717004+05:30;True|2022-10-10T08:39:16.2629398+05:30;True|2022-10-10T08:39:02.5752731+05:30;True|2022-10-10T08:27:13.4305080+05:30;True|2022-10-09T22:38:06.1013139+05:30;True|2022-10-09T22:37:41.6349726+05:30;</History>
+  </PropertyGroup>
+</Project>
